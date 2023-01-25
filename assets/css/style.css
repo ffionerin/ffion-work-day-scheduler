@@ -58,7 +58,7 @@ td, tr, #table-body {
 
 .past {
   background-color: #d3d3d3;
-  color: white;
+  color: black;
 }
 
 .present {
@@ -95,10 +95,5 @@ need to research why adding these into the "hour" class doesn't work */
   width: 10%;
   text-align: center;
   vertical-align: middle;
-}
-
-.table-responsive tr td:nth-child(2) input {
-  width: 100%;
-  height: 100%;
 }
 
