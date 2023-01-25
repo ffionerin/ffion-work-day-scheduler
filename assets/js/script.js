@@ -8,6 +8,44 @@ function displayTime() {
 
 displayTime()
 
+var currentTime = new Date();
+
+$('.textarea').each(function() {
+  var hour = $(this).closest('tr').find('.hour').text();
+  var hourNum = parseInt(hour.replace(/[^0-9]/g, ''));
+
+  if (hourNum < currentTime.getHours()) {
+    $(this).addClass('past');
+  } else if (hourNum === currentTime.getHours()) {
+    $(this).addClass('present');
+  } else {
+    $(this).addClass('future');
+  }
+});
+
+function saveInput(){
+    let userInput = document.querySelector('#tasks').value;
+    localStorage.setItem('userInput', userInput);
+  }
+  
+  // Code to retrieve the user's input
+  function getInput(){
+    let storedInput = localStorage.getItem('userInput');
+    return storedInput;
+  }
+
+  
+$('#saveBtn').click(function(){
+    saveInput();
+  });
+
+  
+
+  window.onbeforeunload = function() {
+    saveInput();
+};
+
+getInput()
 // need to add these classes dynamically, depending on what time it is - parseInt, present and future
  
 // * Present timeblocks for standard business hours when the user scrolls down.
