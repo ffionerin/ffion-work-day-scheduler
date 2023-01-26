@@ -4,28 +4,18 @@ body {
   line-height: 1;
 }
 
-
-
-
 .textarea {
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
   border-left: 1px solid black;
   margin: 0;
-  padding: 0;
+  padding: 1%;
   border-width: 0px;
   width: 100%;
-  box-sizing: border-box;
-  /* padding: 10px; */
 }
 
-td, tr, #table-body {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
+
 
 .jumbotron {
   text-align: center;
@@ -40,14 +30,7 @@ td, tr, #table-body {
 }
 
 .time-block {
-  text-align: center;
   border-radius: 15px;
-}
-
-.row {
-  white-space: pre-wrap;
-  height: 100px;
-  border-top: 1px solid white;
 }
 
 .hour {
@@ -89,6 +72,10 @@ need to research why adding these into the "hour" class doesn't work */
   width: 10%;
   vertical-align: middle;
   text-align: right; 
+}
+
+.table td {
+  padding: 5px;
 }
 
 .table-responsive tr td:last-child {
